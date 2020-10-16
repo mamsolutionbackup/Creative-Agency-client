@@ -1,0 +1,16 @@
+.slick-dots li button:before{
+    color: white;
+}
+.slick-dots li button:before{
+    background-color: aliceblue;
+}
+.Slider{
+    width: 10;
+}
+.Slider:hover{
+cursor: pointer;
+}
+.slick-slide:hover{
+    transform: scale(1.1);
+   transition-duration: 1s;
+}

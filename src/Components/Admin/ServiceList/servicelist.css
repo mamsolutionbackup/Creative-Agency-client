@@ -1,0 +1,29 @@
+#activityTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+     
+  }
+  #activityTable td, #activityTable th {
+    border: none;
+    padding: 8px;
+  }
+  
+  
+  #activityTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#eee;
+    color: black;
+  }
+  #tabel tr{
+    height: auto;
+  }
+  #tableHead{
+    background-color:#E5E5E5 ;
+    border-radius: 20px;
+    color: #686868;
+    ;
+  }

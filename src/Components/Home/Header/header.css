@@ -1,0 +1,64 @@
+header{
+        height:635px;
+        position:relative;
+        background :#FBD062  ;
+        background-size: cover;
+    }
+    header::after {
+        height:100px;
+        content:' ';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        background: linear-gradient(to right bottom,#FBD062 50%,white 50%);
+        
+    }
+    .h1Style{
+        line-height:48px;
+        font-weight:700;
+        color:#111430;
+        padding: 10px;
+    }
+    @media screen and (max-width: 680px) {
+        header{
+            height: 700px;
+        }
+      }
+    #navlink{
+        color: #474747;
+        font-size: 16px;
+    }
+    #navlink .active{
+        color: #474747;
+        font-weight: 600;
+        
+        background-color: transparent;
+        
+    }
+    .btnstyle{
+        background-color: #111430;
+        color: white;
+        padding: 6px 20px;
+        border: none;
+    }
+    .btnstyle2{
+        background-color: #DEFFED;
+        color:  #009444;
+        padding: 6px 20px;
+        border: 1px solid #009444 ;
+    }
+    .btnstyle3{
+        background-color:#009444;
+        color: white;
+        padding: 5px 15px;
+        margin-left: 20px;
+         
+    
+    }
+    .btnstyle:hover{
+        background-color: #111430;
+        color: white;
+        
+    }
+    
