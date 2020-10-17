@@ -43,7 +43,7 @@ const Review = () => {
         <div style={{ width: "100%" }}>
             {
                 content ? (
-                    <Form onSubmit={handleSubmit} style={{ width: "60%" }} >
+                    <Form onSubmit={handleSubmit}   id="userForm" >
 
                         <Form.Group controlId="formBasicTitle">
                             <Form.Control type="text" name="name" placeholder="name" value={reviewData.name} onChange={handleChage} required />

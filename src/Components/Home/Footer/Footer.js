@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer style={{marginTop:"50px"}}>
             <Container fluid style={{ backgroundColor: "#FBD062", padding: "30px", }} id="contact">
                 <Row style={{ padding: "50px", paddingTop: "100px" }}>
                     <Col>
@@ -11,7 +11,7 @@ const Footer = () => {
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam delectus, minima error eius et nulla? Tenetur eveniet tempora doloribus cupiditate?</p>
                     </Col>
                     <Col>
-                        <Form style={{ width: "60%", margin: "auto" }}>
+                        <Form style={{  margin: "auto" }} className="userForm">
                             <Form.Group controlId="exampleForm.ControlInput1">
 
                                 <Form.Control type="email" placeholder="name@example.com" />

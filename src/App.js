@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
     <loginContext.Provider value={[loggedUser,setLoggedUser]}>
-      <Container fluid style={{padding:"0px"}}>
+      <Container fluid style={{padding:"0px" }}>
      
       <Switch>
         <Route exact path="/">
@@ -26,9 +26,9 @@ function App() {
         <Route path="/admin">
           <AdminHome></AdminHome>
         </Route>
-        <PrivateRoute path="/user">
+        <Route path="/user">
           <UserHome/>
-        </PrivateRoute>
+        </Route>
         <Route path='/login'>
           <Login/>
         </Route>

@@ -16,17 +16,11 @@ const OurWorks = () => {
      
    
     return (
-        <Container style={{ backgroundColor: " #111430", padding: "50px" }}>
+        <Container style={{ backgroundColor: " #111430", padding: "50px",marginTop:"50px" }}>
 
             <h3 style={{color:"white",textAlign:"center",padding:"15px 5px"}}> Here are Some Of Our Works </h3>
             <Slider {...settings}  >
-                {/* {
-                  carouselItem.map(data=>
-                    <div style={{margin:"10px"}} className="Slider">
-                      <img src={data} alt="" width="80%" height="320px" width="80%" height="330px"/>
-                    </div>
-                    )
-                } */}
+                 
                 <div style={{ width: 400 }}>
             <img src={carousel1} alt="" width="80%" height="320px"/>
           </div>

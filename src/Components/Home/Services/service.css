@@ -1,6 +1,11 @@
 #cardStyle{
+   
    border: none;
    padding: 10px;
+}
+#cardContainer{
+   margin: 100px;
+    text-align: center 
 }
 #cardStyle:hover{
     box-shadow:5px 5px 10px rgb(0,0,0,.1),-5px -5px 10px rgb(0,0,0,.1);

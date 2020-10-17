@@ -17,7 +17,7 @@ const UserServiceList = () => {
     }, [])
     return (
         <section>
-            <Container style={{ margin: "100px", textAlign: "center" }}>
+            <Container id="cardContainer">
                 
                 {
                     service.length===0 && <LoadingGif />

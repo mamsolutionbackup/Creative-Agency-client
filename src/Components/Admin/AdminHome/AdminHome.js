@@ -19,7 +19,7 @@ const AdminHome = () => {
                     <h4 className="h1Style">{Them.title}</h4>
                     <h4 className="h1Style" >{loggedUser.name}</h4>
                 </div  >
-                <div style={{backgroundColor:"#FFFF",padding:"25px",margin:"50px"}}>
+                <div   id="TabelContainer">
 
                 {
                     Them.them == "serviceList" && <ServiceList />

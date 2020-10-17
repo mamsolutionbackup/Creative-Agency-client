@@ -17,17 +17,17 @@ const Service = () => {
             .then(data => setService(data))
     }, [])
     return (
-        <section>
-            <Container style={{ margin: "100px", textAlign: "center" }}>
+        <section style={{ marginTop: "100px", textAlign: "center" }}>
+            <Container >
                 <h1 className="h1Style">Provide Awesome Service</h1>
                 {
                     service.length===0 && <LoadingGif />
                 }
-                <Row>
+                <Row style={{display:"flex",justifyContent:"center",marginTop:"20px"}}>
                     {
                         service.map(data =>
                            
-                            <Col xs={8} md={6} lg={4} style={{ marginTop: "15px" }}>
+                            <Col xs={8} md={6} lg={4} style={{ marginTop: "15px"  }}>
                                  <Link to={
                                      {
                                          pathname:"/user",

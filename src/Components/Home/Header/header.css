@@ -20,7 +20,7 @@ header{
         color:#111430;
         padding: 10px;
     }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 980px) {
         header{
             height: 700px;
         }

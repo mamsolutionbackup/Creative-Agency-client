@@ -39,9 +39,9 @@ const AddService = () => {
                 setContent(false);
                 SetServieData({ title: "", description: "", file: "" })
             })
-            .catch(err=>{
-                console.log(err);
-            })
+                .catch(err => {
+                    console.log(err);
+                })
         }
 
     }
@@ -51,31 +51,34 @@ const AddService = () => {
         <div style={{ width: "100%", backgroundColor: "white" }}>
             {
                 content ? (
-                    <Form onSubmit={handleSubmit} style={{ width: "100%", display: "flex", justifyContent: "space-around" }} >
-                        <div style={{ width: "40%" }}>
-                            <Form.Group controlId="formBasicTitle">
-                                <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" name="title" value={serviceData.title} onChange={handleChage} required />
+                    <Form onSubmit={handleSubmit}  >
+                        <div id="addService">
+                            <div id="part1">
+                                <Form.Group controlId="formBasicTitle">
+                                    <Form.Label>Title</Form.Label>
+                                    <Form.Control type="text" name="title" value={serviceData.title} onChange={handleChage} required />
 
-                            </Form.Group>
+                                </Form.Group>
 
-                            <Form.Group controlId="formBasicName">
-                                <Form.Label>Name</Form.Label>
-                                <Form.Control as="textarea" rows={4} name="description" value={serviceData.description} required onChange={handleChage} />
-                            </Form.Group>
-                        
-                            <Button className="btnstyle3" variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </div >
-                        <div style={{ width: "40%" }}>
-                            <Button className="btnstyle2" onClick={() => document.getElementById("file").click()}><HiCloudUpload /> Upload Photo</Button>
-                            <input type="file" name="file" id="file" onChange={handleChageFile} style={{ display: "none" }} />
-                            <small style={{ padding: "10px", color: "#009444" }}>{serviceData.file.name}</small>
-                            {
-                                error && <small style={{ padding: "10px", color: "red",fontWeight:"600" }}>have to to upload an image</small>
-                            }
+                                <Form.Group controlId="formBasicName">
+                                    <Form.Label>Name</Form.Label>
+                                    <Form.Control as="textarea" rows={4} name="description" value={serviceData.description} required onChange={handleChage} />
+                                </Form.Group>
+
+
+                            </div >
+                            <div id="part2" >
+                                <Button className="btnstyle2" onClick={() => document.getElementById("file").click()}><HiCloudUpload /> Upload Photo</Button>
+                                <input type="file" name="file" id="file" onChange={handleChageFile} style={{ display: "none" }} />
+                                <small style={{ padding: "10px", color: "#009444" }}>{serviceData.file.name}</small>
+                                {
+                                    error && <small style={{ padding: "10px", color: "red", fontWeight: "600" }}>have to to upload an image</small>
+                                }
+                            </div>
                         </div>
+                        <Button className="btnstyle3" style={{marginTop:"20px",padding:"5px 20px"}} variant="primary" type="submit">
+                            Submit
+                            </Button>
 
                     </Form>
 

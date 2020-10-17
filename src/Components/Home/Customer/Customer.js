@@ -9,7 +9,7 @@ const Customer = () => {
     const company=[slack,google,uber,netflix,airbnb]
     return (
         <section>
-            <Container style={{margin :"50px",fontSize:"16px",padding:"30px"}}>
+            <Container style={{marginTop :"50px",fontSize:"16px",padding:"30px"}}>
                 <Row className="d-flex justify-content-center">
                     
                         {

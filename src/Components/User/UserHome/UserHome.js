@@ -10,7 +10,7 @@ import UserServiceList from '../ServiceList/UserServiceList';
 const UserHome = () => {
     const [loggedUser,setLoggedUser] = useContext(loginContext);
     const location = useLocation();
-    const serviceData = location.state;
+    const serviceData = location.state || "";
    
     const [Them, setThem] = useState({ them: "orders", title: "Orders" });
     return (
@@ -23,10 +23,10 @@ const UserHome = () => {
                     <h4 className="h1Style">{Them.title}</h4>
                     <h4 className="h1Style" >{loggedUser.name}</h4>
                 </div  >
-                <div style={{padding:"25px",margin:"50px"}}>
+                <div id="TabelContainer">
 
                 {
-                    Them.them == "orders" && <Order Data={serviceData.data} />
+                    Them.them == "orders" && <Order Data={serviceData.data || ""} />
                 }
                 {
                     Them.them == "service-list" && <UserServiceList />

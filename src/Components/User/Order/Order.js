@@ -5,14 +5,13 @@ import { useParams } from 'react-router-dom';
 import { loginContext } from '../../../App';
 
 const Order = ({Data}) => {
-    console.log(Data.image.img);
     const [loggedUser, setLoggedUser] = useContext(loginContext);
    
     const [orderData, setOrderData] = useState(
         {
             name: loggedUser.name,
             email: loggedUser.email,
-            serviceName: Data.title,
+            serviceName: Data.title || "",
             description: "", price: 0, file: ""
         })
     const [error, setError] = useState(false);
@@ -70,7 +69,7 @@ const Order = ({Data}) => {
         <div style={{ width: "100%" }}>
             {
                 content ? (
-                    <Form onSubmit={handleSubmit} style={{ width: "60%" }} >
+                    <Form onSubmit={handleSubmit} id="userForm"   >
 
                         <Form.Group controlId="formBasicTitle">
                             <Form.Control type="text" name="name" placeholder="name" value={orderData.name} onChange={handleChage} required />

@@ -28,9 +28,9 @@ const AddAdmin = () => {
         <div style={{ width: "100%", backgroundColor: "white" }}>
             {
                 content ? (
-                    <Form onSubmit={handleSubmit} style={{ display:"flex"}} >
+                    <Form onSubmit={handleSubmit}   id="Addadmin" >
                         
-                            <Form.Group controlId="formBasicTitle" style={{width:"40%"}}>
+                            <Form.Group controlId="formBasicTitle" id="Adminform">
                                 
                                 <Form.Control type="email" name="email" value={adminData.email} placeholder="admnin email" onChange={handleChage} required />
 

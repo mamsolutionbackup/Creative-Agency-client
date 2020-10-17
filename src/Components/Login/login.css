@@ -2,15 +2,11 @@
 #parent{
     
     margin: auto;
-   width: 45%;
+   width: 50%;
    
    text-align: center;
    padding:30px 10px;
 }
-@media screen and (max-width: 680px) {
-   #parent {width: 100%; float: left;}
-}
-
 .login-form{
   
    box-shadow: 5px 5px 10px rgb(0,0,0,.1),
@@ -25,3 +21,13 @@
    width: 60%;
    margin-top: 20px;
 }
+@media screen and (max-width: 780px) {
+   #parent {
+      width: 80%;
+    }
+   #sigining-btn{
+      width: 90%;
+      
+   }
+}
+

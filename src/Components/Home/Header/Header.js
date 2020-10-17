@@ -6,7 +6,7 @@ import Frame from '../../../images/logos/Frame.png'
 const Header = () => {
     return (
         <header>
-            <Container style={{ padding: "10px" }}>
+            <Container >
                 <NavBar />
                 <Row style={{marginTop:"35px",padding:"15px"}}>
                     <Col sm={6} md={5}>
