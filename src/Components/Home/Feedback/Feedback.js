@@ -10,7 +10,7 @@ const Feedback = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/getUserReview")
+        fetch("https://shielded-wildwood-60115.herokuapp.com/getUserReview")
             .then(res => res.json())
             .then(data => {
                 setError(false)
@@ -33,7 +33,7 @@ const Feedback = () => {
             <Row style={{ marginTop: "20px" }}>
                 {
                     feedback.map(dt =>
-                        <Col sm={6} md={4} lg={4} style={{ marginTop: "15px" }}>
+                        <Col sm={6} md={4} lg={4} style={{ marginTop: "15px" }} key={dt._id}>
                             <div style={{ padding: "10px", border: "1px solid #BFBFBF" }}>
 
                                 <Row style={{ padding: "20px 0px" }} >

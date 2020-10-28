@@ -11,7 +11,7 @@ const AddAdmin = () => {
     }
     const handleSubmit=event=>{
         event.preventDefault();
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://shielded-wildwood-60115.herokuapp.com/addAdmin', {
             method: "POST",
             headers:{
                 'Content-Type': 'application/json'

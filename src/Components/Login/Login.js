@@ -29,7 +29,7 @@ const Login = () => {
                 name:result.user.displayName,
                 photo:result.user.photoURL
             }
-            fetch(`http://localhost:5000/getAdmin?email=${newUser.email}`)
+            fetch(`https://shielded-wildwood-60115.herokuapp.com/getAdmin?email=${newUser.email}`)
             .then(res=>res.json())
             .then(data=>{
                 console.log(data);

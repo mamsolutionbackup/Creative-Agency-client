@@ -30,7 +30,7 @@ const AddService = () => {
             data.append('description', serviceData.description)
             data.append('file', serviceData.file)
             console.log(data);
-            fetch('http://localhost:5000/addService', {
+            fetch('https://shielded-wildwood-60115.herokuapp.com/addService', {
                 method: "POST",
                 body: data
 

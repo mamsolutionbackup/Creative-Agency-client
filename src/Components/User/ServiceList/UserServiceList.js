@@ -6,35 +6,56 @@ import LoadingGif from '../../SharedComponents/LodingGif/LoadingGif';
 const UserServiceList = () => {
     const [loggedUser, setLoggedUser] = useContext(loginContext);
     const [service, setService] = useState([]);
+    const [empty, setEmpty] = useState(false);
     useEffect(() => {
-        fetch(`http://localhost:5000/getUserOrder?email=${loggedUser.email}`)
+        fetch(`https://shielded-wildwood-60115.herokuapp.com/getUserOrder?email=${loggedUser.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                setService(data)
+                if (data.length == 0) {
+                    setEmpty(true)
+                }
+                else {
+                    setEmpty(false)
+                    setService(data)
+                }
+
             })
-            .catch(error => console.log(error))
+            .catch(error => { })
     }, [])
     return (
         <section>
             <Container id="cardContainer">
-                
+
                 {
-                    service.length===0 && <LoadingGif />
+                    empty ? (<h4 className="h1Style">No service you have take yet</h4>) : (
+
+                        service.length === 0 && <LoadingGif />
+
+                    )
                 }
-                
+
                 <Row>
                     {
-                        
+
                         service.map(data =>
-                            <Col xs={8} md={6} lg={5} style={{ marginTop: "15px" }}>
+                            <Col xs={8} md={6} lg={5} style={{ marginTop: "15px" }} key={data._id} >
                                 <Card id="cardStyle"  >
-                                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
                                         <Card.Img variant="top" src={`data:image/png;base64,${data.serviceImage}`} style={{ width: "25%", borderRadius: "50%" }} />
-                                       <div style={{padding:"10px"}}>
-                                       <Button variant="warning">{data.status}</Button>
-                                       </div>
-                                       
+                                        <div style={{ padding: "10px" }}>
+                                            {
+                                                data.status == "Done" && <Button variant="success" >{data.status}</Button>
+                                            }
+                                            {
+                                                data.status == "pending" && <Button variant="danger" >{data.status}</Button>
+                                            }
+                                            {
+                                                data.status == "On Going" && <Button variant="warning" >{data.status}</Button>
+                                            }
+
+
+                                        </div>
+
                                     </div>
 
                                     <Card.Body>

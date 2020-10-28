@@ -12,7 +12,7 @@ import LoadingGif from '../../SharedComponents/LodingGif/LoadingGif';
 const Service = () => {
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/getService")
+        fetch("https://shielded-wildwood-60115.herokuapp.com/getService")
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -27,7 +27,7 @@ const Service = () => {
                     {
                         service.map(data =>
                            
-                            <Col xs={8} md={6} lg={4} style={{ marginTop: "15px"  }}>
+                            <Col xs={8} md={6} lg={4} style={{ marginTop: "15px"  }} key={data._id}>
                                  <Link to={
                                      {
                                          pathname:"/user",

@@ -48,7 +48,7 @@ const Order = ({Data}) => {
             data.append("status","pending")
             data.append('file', orderData.file)
              
-            fetch('http://localhost:5000/addOrder', {
+            fetch('https://shielded-wildwood-60115.herokuapp.com/addOrder', {
                 method: "POST",
                 body: data
 

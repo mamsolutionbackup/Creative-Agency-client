@@ -10,7 +10,7 @@ const ServiceList = () => {
     const [color, setColor] = useState("red");
 
     useEffect(() => {
-        fetch("http://localhost:5000/getOrder")
+        fetch("https://shielded-wildwood-60115.herokuapp.com/getOrder")
             .then(res => res.json())
             .then(data => {
                 setService(data)
@@ -23,7 +23,7 @@ const ServiceList = () => {
 
         setService([])
 
-        fetch(`http://localhost:5000/updateOrderStatus/${id}`, {
+        fetch(`https://shielded-wildwood-60115.herokuapp.com/updateOrderStatus/${id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ const ServiceList = () => {
 
                                 {
                                     service.map(data =>
-                                        <tr  >
+                                        <tr  key={data._id}>
 
                                             <td >{data.name}</td>
                                             <td >{data.email}</td>
