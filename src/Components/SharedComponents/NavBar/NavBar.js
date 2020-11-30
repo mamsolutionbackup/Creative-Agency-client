@@ -22,6 +22,9 @@ const NavBar = () => {
           <Link to="/login">
            <Button className="btnstyle" style={{marginLeft:"20px"}}>Sign In</Button>
            </Link>
+           <Link to="/admin">
+           <Button className="btnstyle" style={{marginLeft:"20px"}}>Admin Panel</Button>
+           </Link>
         </Navbar.Collapse>
       </Navbar>
     );
