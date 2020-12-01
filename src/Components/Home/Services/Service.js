@@ -17,7 +17,7 @@ const Service = () => {
             .then(data => setService(data))
     }, [])
     return (
-        <section style={{ marginTop: "100px", textAlign: "center" }}>
+        <section style={{ marginTop: "100px", textAlign: "center" }} id="service">
             <Container >
                 <h1 className="h1Style">Provide Awesome Service</h1>
                 {

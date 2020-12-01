@@ -16,7 +16,7 @@ const OurWorks = () => {
      
    
     return (
-        <Container style={{ backgroundColor: " #111430", padding: "50px",marginTop:"50px" }}>
+        <Container id="work" style={{ backgroundColor: " #111430", padding: "50px",marginTop:"50px" }}>
 
             <h3 style={{color:"white",textAlign:"center",padding:"15px 5px"}}> Here are Some Of Our Works </h3>
             <Slider {...settings}  >

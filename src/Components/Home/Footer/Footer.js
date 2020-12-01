@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer style={{marginTop:"50px"}}>
+        <footer style={{marginTop:"50px"}} id="contact">
             <Container fluid style={{ backgroundColor: "#FBD062", padding: "30px", }} id="contact">
                 <Row style={{ padding: "50px", paddingTop: "100px" }}>
                     <Col>
